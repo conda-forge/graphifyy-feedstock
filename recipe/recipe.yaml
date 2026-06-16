@@ -56,6 +56,11 @@ requirements:
     - tree-sitter-fortran >=0.6
     - tree-sitter-bash >=0.23
     - tree-sitter-json >=0.23
+  # Optional extras — soft constraints. When the user installs both
+  # graphifyy and tree-sitter-sql, conda guarantees compatible versions;
+  # graphifyy alone does NOT pull in tree-sitter-sql.
+  run_constrained:
+    - tree-sitter-sql >=0.3
 
 tests:
   - python:
