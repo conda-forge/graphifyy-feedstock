@@ -56,11 +56,30 @@ requirements:
     - tree-sitter-fortran >=0.6
     - tree-sitter-bash >=0.23
     - tree-sitter-json >=0.23
-  # Optional extras — soft constraints. When the user installs both
-  # graphifyy and tree-sitter-sql, conda guarantees compatible versions;
-  # graphifyy alone does NOT pull in tree-sitter-sql.
+  # Optional extras per upstream's [project.optional-dependencies] —
+  # listed here as soft constraints. graphifyy alone does NOT pull
+  # them in; when the user explicitly installs e.g. `mamba install
+  # graphifyy openai tiktoken`, conda guarantees compatible versions.
+  # `falkordb` (falkordb extra) and `faster-whisper` (video extra)
+  # are intentionally omitted — not yet on conda-forge.
   run_constrained:
+    - anthropic
+    - boto3
+    - graspologic
+    - jieba
+    - markdownify
+    - matplotlib
+    - mcp
+    - neo4j-python-driver
+    - openai
+    - openpyxl
+    - psycopg
+    - pypdf
+    - python-docx
+    - tiktoken
     - tree-sitter-sql >=0.3
+    - watchdog
+    - yt-dlp
 
 tests:
   - python:
