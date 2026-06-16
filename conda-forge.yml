@@ -1,5 +1,4 @@
-bot:
-  automerge: true
+conda_install_tool: pixi
 conda_build_tool: rattler-build
 github:
   branch_name: main
@@ -7,3 +6,8 @@ github:
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
+bot:
+  automerge: true
+  inspection: update-grayskull
+  check_solvable: true
+  run_deps_from_wheel: true
