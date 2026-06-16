@@ -149,4 +149,5 @@ Feedstock Maintainers
 
 * [@killua156](https://github.com/killua156/)
 * [@mgorny](https://github.com/mgorny/)
+* [@rxm7706](https://github.com/rxm7706/)
 
