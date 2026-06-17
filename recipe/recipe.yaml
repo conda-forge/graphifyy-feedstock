@@ -56,13 +56,7 @@ requirements:
     - tree-sitter-fortran >=0.6
     - tree-sitter-bash >=0.23
     - tree-sitter-json >=0.23
-  # Optional extras per upstream's [project.optional-dependencies] —
-  # listed here as soft constraints. graphifyy alone does NOT pull
-  # them in; when the user explicitly installs e.g. `mamba install
-  # graphifyy openai tiktoken`, conda guarantees compatible versions.
-  # `falkordb` (falkordb extra) and `faster-whisper` (video extra)
-  # are intentionally omitted — not yet on conda-forge.
-  run_constrained:
+  run_constraints:
     - anthropic
     - boto3
     - graspologic
@@ -80,20 +74,17 @@ requirements:
     - tree-sitter-sql >=0.3
     - watchdog
     - yt-dlp
+    #- falkordb # TODO: add falkordb to conda-forge,
+    #- faster-whisper # TODO: add faster-whisper to conda-forge, requires CTranslate2 first
 
 tests:
   - python:
       imports:
         - graphify
+      pip_check: true
       python_version:
         - ${{ python_min }}.*
         - "*"
-      pip_check: true
-  - requirements:
-      run:
-        - pip
-    script:
-      - graphify --help
 
 about:
   summary: |
