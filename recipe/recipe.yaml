@@ -30,32 +30,32 @@ requirements:
     - networkx >=3.4
     - numpy >=1.21
     - rapidfuzz >=3.0
-    - tree_sitter >=0.23.0
-    - tree-sitter-python >=0.23
-    - tree-sitter-javascript >=0.23
-    - tree-sitter-typescript >=0.23
-    - tree-sitter-go >=0.23
-    - tree-sitter-rust >=0.23
-    - tree-sitter-java >=0.23
-    - tree-sitter-groovy >=0.1
-    - tree-sitter-c >=0.23
-    - tree-sitter-cpp >=0.23
-    - tree-sitter-ruby >=0.23
-    - tree-sitter-c-sharp >=0.23
-    - tree-sitter-kotlin >=1.0
-    - tree-sitter-scala >=0.23
-    - tree-sitter-php >=0.23
-    - tree-sitter-swift >=0.7
-    - tree-sitter-lua >=0.2
-    - tree-sitter-zig >=1.0
-    - tree-sitter-powershell >=0.26
-    - tree-sitter-elixir >=0.3
-    - tree-sitter-objc >=3.0
-    - tree-sitter-julia >=0.23
-    - tree-sitter-verilog >=1.0
-    - tree-sitter-fortran >=0.6
-    - tree-sitter-bash >=0.23
-    - tree-sitter-json >=0.23
+    - tree_sitter >=0.23.0,<0.26
+    - tree-sitter-python >=0.23,<0.26
+    - tree-sitter-javascript >=0.23,<0.26
+    - tree-sitter-typescript >=0.23,<0.25
+    - tree-sitter-go >=0.23,<0.26
+    - tree-sitter-rust >=0.23,<0.25
+    - tree-sitter-java >=0.23,<0.25
+    - tree-sitter-groovy >=0.1,<0.3
+    - tree-sitter-c >=0.23,<0.25
+    - tree-sitter-cpp >=0.23,<0.25
+    - tree-sitter-ruby >=0.23,<0.25
+    - tree-sitter-c-sharp >=0.23,<0.25
+    - tree-sitter-kotlin >=1.0,<2.0
+    - tree-sitter-scala >=0.23,<0.27
+    - tree-sitter-php >=0.23,<0.25
+    - tree-sitter-swift >=0.7,<0.9
+    - tree-sitter-lua >=0.2,<0.6
+    - tree-sitter-zig >=1.0,<2.0
+    - tree-sitter-powershell >=0.26,<0.28
+    - tree-sitter-elixir >=0.3,<0.5
+    - tree-sitter-objc >=3.0,<4.0
+    - tree-sitter-julia >=0.23,<0.25
+    - tree-sitter-verilog >=1.0,<2.0
+    - tree-sitter-fortran >=0.6,<0.8
+    - tree-sitter-bash >=0.23,<0.27
+    - tree-sitter-json >=0.23,<0.26
   run_constraints:
     - anthropic
     - boto3
@@ -74,8 +74,8 @@ requirements:
     - tree-sitter-sql >=0.3
     - watchdog
     - yt-dlp
-    #- falkordb # TODO: add falkordb to conda-forge,
-    #- faster-whisper # TODO: add faster-whisper to conda-forge, requires CTranslate2 first
+    #- falkordb # TODO: add falkordb to conda-forge
+    #- faster-whisper # TODO: add faster-whisper to conda-forge, requires add CTranslate2 to conda-forge
 
 tests:
   - python:
@@ -85,6 +85,11 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - "*"
+  - requirements:
+      run:
+        - pip
+    script:
+      - graphify --help
 
 about:
   summary: |
