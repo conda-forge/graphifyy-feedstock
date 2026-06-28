@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.51"
+  version: "0.9.1"
 
 package:
   name: graphifyy
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/graphifyy/graphifyy-${{ version }}.tar.gz
-  sha256: 5e6c28e5a8d5f6795a91944329c5c352c8dcbb52c6fc0fa64f2644775ce6d2fa
+  sha256: 2b73a08759c149690486c032a2cc2fd889f3bb562cc14cef3c4842d53fd0a0fe
 
 build:
   noarch: python
