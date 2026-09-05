@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.9.51"
+  version: 0.9.54
 
 package:
   name: graphifyy
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/graphifyy/graphifyy-${{ version }}.tar.gz
-  sha256: 10d32c5569576b15125f5cf94f277f511151bdf57369ae2636c88e08b2bf0519
+  sha256: 66003ab77b40bb9e639462736daa14d683aee99346e3d42a5da6be29ca53b3aa
 
 build:
   noarch: python
@@ -56,6 +56,7 @@ requirements:
     - tree-sitter-fortran >=0.6,<0.8
     - tree-sitter-bash >=0.23,<0.27
     - tree-sitter-json >=0.23,<0.26
+    - tomli >=2.0.1
   run_constraints:
     - anthropic
     - boto3
@@ -84,7 +85,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - requirements:
       run:
         - pip
