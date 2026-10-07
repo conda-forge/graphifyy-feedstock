@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.9.79"
+  version: 0.9.80
 
 package:
   name: graphifyy
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/graphifyy/graphifyy-${{ version }}.tar.gz
-  sha256: efa4b87109ea1cf536372ec88620dd2325183f4b4dc59ae4c18df88c23afa80b
+  sha256: 7555f54002ee2497692c662f130166c171834dc992f36d0f965e34204e947b07
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - networkx >=3.4
     - numpy >=1.21
     - rapidfuzz >=3.0
-    - tree_sitter >=0.23.0,<0.26
+    - tree_sitter >=0.25,<0.26
     - tree-sitter-python >=0.23,<0.26
     - tree-sitter-javascript >=0.23,<0.26
     - tree-sitter-typescript >=0.23,<0.25
